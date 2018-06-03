@@ -1,7 +1,5 @@
 package observatory
 
-import java.time.LocalDate
-
 /**
   * Introduced in Week 1. Represents a location on the globe.
   * @param lat Degrees of latitude, -90 ≤ lat ≤ 90
@@ -9,11 +7,9 @@ import java.time.LocalDate
   */
 case class Location(lat: Double, lon: Double)
 
-/**
-  * @param date
-  * @param temperature
-  */
-case class TemperatureRecord(date: LocalDate, temperature: Temperature)
+case class TemperatureRecord(stnId: Option[Int], wbanId: Option[Int], month: Int, day: Int, temperature: Temperature)
+
+case class Station(stnId: Option[Int], wbanId: Option[Int], latitude: Option[Double], longitude: Option[Double])
 
 /**
   * Introduced in Week 3. Represents a tiled web map tile.
