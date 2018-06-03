@@ -1,11 +1,19 @@
 package observatory
 
+import java.time.LocalDate
+
 /**
   * Introduced in Week 1. Represents a location on the globe.
   * @param lat Degrees of latitude, -90 ≤ lat ≤ 90
   * @param lon Degrees of longitude, -180 ≤ lon ≤ 180
   */
 case class Location(lat: Double, lon: Double)
+
+/**
+  * @param date
+  * @param temperature
+  */
+case class TemperatureRecord(date: LocalDate, temperature: Temperature)
 
 /**
   * Introduced in Week 3. Represents a tiled web map tile.
